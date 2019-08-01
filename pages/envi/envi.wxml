@@ -3,15 +3,15 @@
 <view class="container">
 
 
-   <scroll-view scroll-y style="height: 400px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
-     <view wx:for="{{enviinfo}}">
-       <text>Temperature:{{item.Hum}}\n
+  <scroll-view scroll-y style="height: 400px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <view wx:for="{{enviinfo}}">
+      <text>Temperature:{{item.Hum}}\n
     Humidity:{{item.Hum}}\n
     Pressure:{{item.Pre}}\n
     Time:{{item.Timestamp}}\n
-    -------------------------------\n
+    ------------------------------\n
     </text>
-  </view>
+    </view>
 
   </scroll-view>
 
