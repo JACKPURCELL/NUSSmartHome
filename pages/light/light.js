@@ -6,21 +6,17 @@ Page({
    */
   data: {
      lightvalue:0,
-     currentValue:50
+  
   },
-  onDrag(event) {
-    this.setData({
-      currentValue: event.detail.value
-    })
-  },
+
 
   onChange(event) {
     wx.showToast({
       icon: 'none',
-      title: `当前值：${event.detail}`
+      title: `当前值：${event.detail.value}`
     });
-    this.setData({ lightvalue: event.detail / 100 }),
-      this.putlight()
+    this.setData({ lightvalue: event.detail.value / 100 }),
+    this.putlight()
   },
 
 

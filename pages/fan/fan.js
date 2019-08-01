@@ -1,12 +1,48 @@
-// pages/Fan/fan.js
+// pages/light/light.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    lightvalue: 0,
 
   },
+
+
+  onChange(event) {
+    wx.showToast({
+      icon: 'none',
+      title: `当前值：${event.detail.value}`
+    });
+    this.setData({ lightvalue: event.detail.value / 100 }),
+      this.putlight()
+  },
+
+
+
+
+  putlight: function () {
+    wx.request({
+      url: 'https://nussh.happydoudou.xyz:5000/api/Fight', //仅为示例，并非真实的接口地址
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      method: "PUT",
+      data: { "Speed": "" + this.data.lightvalue + "" }
+    })
+  },
+
+
+  //     success(res) {
+  //       cb(res.data)
+  //       // var thispage = this;
+
+  //       // thispage.setData({ enviinfo: res.data })
+
+  //     }
+  //   })
+  // },
 
   /**
    * 生命周期函数--监听页面加载

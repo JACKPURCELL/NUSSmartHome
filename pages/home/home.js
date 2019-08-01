@@ -15,6 +15,10 @@ Page({
   gotolight: function () {
     wx.navigateTo({ url: '/pages/light/light', })
   },
+
+  gotofan: function () {
+    wx.navigateTo({ url: '/pages/fan/fan', })
+  },
   
   /**
    * 生命周期函数--监听页面加载

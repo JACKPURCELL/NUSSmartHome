@@ -1,2 +1,14 @@
-<!--pages/Fan/fan.wxml-->
-<text>pages/Fan/fan.wxml</text>
+<!--pages/light/light.wxml-->
+<view class="container">
+
+  <view class="text-bg">
+    <text class="new">Set the FAN SPEED by yourself</text>
+  </view>
+
+  <view class="section section_gap">
+
+    <view class="body-view">
+      <slider bindchange="onChange"  show-value/>
+    </view>
+  </view>
+</view>

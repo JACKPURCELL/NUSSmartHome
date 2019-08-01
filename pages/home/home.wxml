@@ -11,10 +11,8 @@
  <van-button type="primary" size="large" block custom-class="demo-margin-bottom" bindtap="gotolight">Light</van-button>
  
  </view><view class="row">
- <van-button type="primary" size="large" block custom-class="demo-margin-bottom" bindtap="primary">Air-Con</van-button>
- </view><view class="row">
- <van-button type="primary" size="large" block custom-class="demo-margin-bottom" bindtap="primary">Curtain</van-button>
-</view>
+ <van-button type="primary" size="large" block custom-class="demo-margin-bottom" bindtap="gotofan">Fan</van-button>
+ </view>
 
 
   </demo-block>
