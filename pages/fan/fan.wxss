@@ -20,3 +20,8 @@
   flex-direction: column;
   justify-content: center;
 }
+
+
+.text-bg{
+   margin-bottom: 20px;
+}

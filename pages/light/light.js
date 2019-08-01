@@ -6,7 +6,7 @@ Page({
    */
   data: {
      lightvalue:0,
-  
+      state:1
   },
 
 
@@ -19,7 +19,18 @@ Page({
     this.putlight()
   },
 
+  switch2Change: function (e) {
+    var thispage = this
+    if (e.detail.value) {
+      thispage.setData({ state: 0 });
+      console.log('控制', e.detail.value)
+    }
 
+    else if (!e.detail.value) {
+      thispage.setData({ state: 1 });
+      console.log('控制', e.detail.value)
+    }
+  },
 
 
   putlight: function () {
@@ -29,7 +40,7 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       method: "PUT",
-      data: { "Light": "" + this.data.lightvalue + "" }
+      data: { "Light": "" + this.data.lightvalue + "", "State": "" + this.data.state + "" }
     })
   },
 

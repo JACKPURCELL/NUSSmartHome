@@ -4,11 +4,20 @@
   <view class="text-bg">
     <text class="new">Set the FAN SPEED by yourself</text>
   </view>
+    <view class="text-bg">
+    <text class="new">Please FIRST turn on the switch</text>
+  </view>
+    <view class="body-view">
+
+    <switch bindchange="switch2Change"/>
+</view>
 
   <view class="section section_gap">
 
     <view class="body-view">
       <slider bindchange="onChange"  show-value/>
     </view>
+
+
   </view>
 </view>
