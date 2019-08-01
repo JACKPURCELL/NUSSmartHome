@@ -1,0 +1,24 @@
+<!--pages/light/light.wxml-->
+
+
+<view justify-content="center"><text  class="new">You can set the light by yourself</text></view>
+
+<view class="row">
+
+<demo-block title="自定义按钮">
+  <van-slider
+    value="{{ currentValue }}"
+    custom-class="slider"
+    use-button-slot
+    active-color="#f44"
+    bind:change="onChange"
+    bind:drag="onDrag"
+  >
+    <view class="custom-button" slot="button">
+      {{ currentValue }}
+    </view>
+  </van-slider>
+</demo-block>
+
+</view>
+ 

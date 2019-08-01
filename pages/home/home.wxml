@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="container">
+
+<demo-section>
+
+  <demo-block padding>
+<view class="row">
+ <van-button type="primary" size="large" block custom-class="demo-margin-bottom" bindtap="gotoenvi">  Environment   </van-button>
+</view>
+<view class="row">
+ <van-button type="primary" size="large" block custom-class="demo-margin-bottom" bindtap="gotolight">Light</van-button>
+ 
+ </view><view class="row">
+ <van-button type="primary" size="large" block custom-class="demo-margin-bottom" bindtap="primary">Air-Con</van-button>
+ </view><view class="row">
+ <van-button type="primary" size="large" block custom-class="demo-margin-bottom" bindtap="primary">Curtain</van-button>
+</view>
+
+
+  </demo-block>
+  
+</demo-section>
+</view>
+
