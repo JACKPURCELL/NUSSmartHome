@@ -14,6 +14,15 @@ Page({
     enviinfo: null
   },
 
+
+  compare(property) {
+    return function (a, b) {
+      var value1 = a[property];
+      var value2 = b[property];
+      return value1 > value2 ? -1 : 1
+    }
+  },
+
   getenvi:function(cb){
     wx.request({
       url: 'https://nussh.happydoudou.xyz:5000/api/Environmentfull', //仅为示例，并非真实的接口地址
@@ -50,8 +59,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
-
       // var thispage=this;
       // this.getenvi(data)
       // thispage.setData({enviinfo:data})
@@ -63,8 +70,8 @@ Page({
   onReady: function () {
     var thispage = this;
     this.getenvi(function (data) {
-      console.log(data)
-      thispage.setData({ enviinfo: data })
+      console.log(data.sort(thispage.compare ('Timestamp')))
+      thispage.setData({ enviinfo: data.sort(thispage.compare('Timestamp')) })
     }); 
   },
 
@@ -108,6 +115,7 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
 })
 
