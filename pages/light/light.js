@@ -15,7 +15,7 @@ Page({
       icon: 'none',
       title: `当前值：${event.detail.value}`
     });
-    this.setData({ lightvalue: event.detail.value / 100 }),
+    this.setData({ lightvalue: event.detail.value  }),
     this.putlight()
   },
 
@@ -29,6 +29,7 @@ Page({
     else if (!e.detail.value) {
       thispage.setData({ state: 1 });
       console.log('控制', e.detail.value)
+      this.putlight()
     }
   },
 
@@ -40,7 +41,7 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       method: "PUT",
-      data: { "Light": "" + this.data.lightvalue + "", "State": "" + this.data.state + "" }
+      data: { "Ligcon": "" + this.data.lightvalue + "", "State": "" + this.data.state + "" }
     })
   },
 

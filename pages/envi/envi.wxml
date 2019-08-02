@@ -5,7 +5,7 @@
 
   <scroll-view scroll-y style="height: 800px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
     <view wx:for="{{enviinfo}}">
-      <text>Temperature:{{item.Hum}}\n
+      <text>Temperature:{{item.Tem}}\n
     Humidity:{{item.Hum}}\n
     Pressure:{{item.Pre}}\n
     Time:{{item.Timestamp}}\n
